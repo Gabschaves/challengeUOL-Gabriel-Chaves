@@ -8,11 +8,11 @@
 		<version>3.1.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.compassUOL</groupId>
-	<artifactId>ChallengeUOL</artifactId>
+	<groupId>com.CompassUOL.GabrielChaves</groupId>
+	<artifactId>challengeUOL</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ChallengeUOL</name>
-	<description>Challenge UOL </description>
+	<name>challengeUOL</name>
+	<description>First challenge UOL back-end Journey</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -29,16 +29,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
