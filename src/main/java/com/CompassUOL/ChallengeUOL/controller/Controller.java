@@ -9,15 +9,16 @@ import com.CompassUOL.ChallengeUOL.repository.RepositoryCar;
 import java.util.List;
 
 @RestController
+@RequestMapping("/car")
 public class Controller {
     @Autowired
     private RepositoryCar repositoryCar;
-    @GetMapping("/car")
+    @GetMapping
     public List<Car> carList(){
         return repositoryCar.findAll();
     }
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/car")
+    @PostMapping
     public Car add(@RequestBody Car car){
         return repositoryCar.save(car);
     }
