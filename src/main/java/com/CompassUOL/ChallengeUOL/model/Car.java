@@ -1,11 +1,11 @@
-package model;
+package com.CompassUOL.ChallengeUOL.model;
 
 import jakarta.persistence.*;
 
 @Entity
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
     private String nameCar;

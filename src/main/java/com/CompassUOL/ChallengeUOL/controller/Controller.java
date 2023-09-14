@@ -1,12 +1,10 @@
-package controller;
+package com.CompassUOL.ChallengeUOL.controller;
 
-import model.Car;
+import com.CompassUOL.ChallengeUOL.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import repository.RepositoryCar;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import com.CompassUOL.ChallengeUOL.repository.RepositoryCar;
 
 import java.util.List;
 
@@ -18,8 +16,10 @@ public class Controller {
     public List<Car> carList(){
         return repositoryCar.findAll();
     }
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/car")
     public Car add(@RequestBody Car car){
         return repositoryCar.save(car);
     }
+
 }
