@@ -14,9 +14,13 @@ import java.util.stream.Collectors;
 public class DtoCar {
 
     private Long chassiId;
+
     private String modelCar;
+
     private String brand;
+
     private String color;
+
     private String fabricationYear;
 
     public DtoCar(Car car) {

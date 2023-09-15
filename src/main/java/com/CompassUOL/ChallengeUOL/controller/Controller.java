@@ -2,6 +2,7 @@ package com.CompassUOL.ChallengeUOL.controller;
 
 import com.CompassUOL.ChallengeUOL.dto.DtoCar;
 import com.CompassUOL.ChallengeUOL.model.Car;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class Controller {
     }
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public Car add(@RequestBody Car car){
+    public Car add(@Valid @RequestBody Car car){
         return repositoryCar.save(car);
     }
 
