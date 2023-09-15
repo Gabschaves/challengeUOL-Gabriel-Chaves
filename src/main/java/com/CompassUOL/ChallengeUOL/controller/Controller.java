@@ -1,6 +1,6 @@
 package com.CompassUOL.ChallengeUOL.controller;
 
-import com.CompassUOL.ChallengeUOL.dto.dtoCar;
+import com.CompassUOL.ChallengeUOL.dto.DtoCar;
 import com.CompassUOL.ChallengeUOL.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,9 +14,9 @@ public class Controller {
     @Autowired
     private RepositoryCar repositoryCar;
     @GetMapping
-    public List<dtoCar> carList(){
+    public List<DtoCar> carList(){
         List<Car> car = repositoryCar.findAll();
-        return dtoCar.convert(car);
+        return DtoCar.convert(car);
     }
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping

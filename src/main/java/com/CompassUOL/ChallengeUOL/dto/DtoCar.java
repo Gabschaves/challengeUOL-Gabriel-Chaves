@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class dtoCar {
+public class DtoCar {
 
     private Long chassiId;
     private String modelCar;
@@ -19,15 +19,15 @@ public class dtoCar {
     private String color;
     private String fabricationYear;
 
-    public dtoCar(Car car) {
+    public DtoCar(Car car) {
         this.chassiId = car.getChassiId();
         this.modelCar = car.getModelCar();
         this.brand =car.getBrand();
         this.color = car.getColor();
         this.fabricationYear = car.getFabricationYear();
     }
-    public static List<dtoCar> convert(List<Car>car){
-        return car.stream().map(dtoCar::new).collect(Collectors.toList());
+    public static List<DtoCar> convert(List<Car>car){
+        return car.stream().map(DtoCar::new).collect(Collectors.toList());
 
     }
 
