@@ -10,7 +10,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long chassiId;
 
-    @Column(name="modelCar", nullable = false)
+    @Column(name="model", nullable = false)
     private String modelCar;
 
     @Column(name = "brand",nullable = false)
