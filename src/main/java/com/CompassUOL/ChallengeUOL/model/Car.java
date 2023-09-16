@@ -1,5 +1,6 @@
 package com.CompassUOL.ChallengeUOL.model;
 
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
@@ -12,9 +13,6 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty
-    @NotNull
-    @Length(max = 25)
     private Long chassiId;
 
     @Column
@@ -26,7 +24,7 @@ public class Car {
     @Column
     @NotNull
     @NotEmpty
-    @Length(max = 30)
+    @Length(max = 50)
     private String brand;
 
     @Column
